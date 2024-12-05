@@ -3,6 +3,48 @@
 
 <head>
     <title>CSS 선택자 예제</title>
+    <style>
+        /* 전체 선택자 */
+        * {
+            color: gray;
+        }
+
+        /* 태그 선택자 */
+        h1, h2, h3, h4, h5, h6 {
+            color: darkgreen;
+        }
+
+        /* id 선택자: # */
+        #apple {
+            color: red;
+        }
+
+        #banana {
+            color: yellow;
+        }
+
+        #orange {
+            color: orange;
+        }
+
+        #grape {
+            color: purple;
+        }
+
+        /* class 선택자: . */
+        .selected {
+            text-decoration: underline;
+        }
+
+        /* 부여한 속성의 초기화 */
+        li {
+            background-color: black;
+        }
+
+        li {
+            background-color: initial;  /* initial - browser default 값 */
+        }
+    </style>
 </head>
 
 <body>
@@ -14,6 +56,8 @@
         <li>아이디 선택자 (#unique): 아이디가 unique인 요소에만 적용</li>
         <li>클래스 선택자 (.common): 클래스가 common인 모든 요소에 적용</li>
     </ul>
+
+    <h2>id, class 선택자</h2>
 
     <ul>
         <li id="apple">사과</li>
