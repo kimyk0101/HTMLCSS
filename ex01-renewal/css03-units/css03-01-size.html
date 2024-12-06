@@ -3,6 +3,67 @@
 
 <head>
     <title>CSS 크기 단위 실습</title>
+
+    <style>
+        /* 절대 단위: px */
+        /* 브라우저의 기본 글꼴 크기는 16px */
+        #text-px > li:nth-child(2) {font-size: 16px;}
+        #text-px > li:nth-child(3) {font-size: 24px;}
+        #text-px > li:last-child {font-size: 32px;}
+
+        /* 상대 단위: % */
+        #text-percent > li:nth-child(2) {font-size: 100%;}
+        #text-percent > li:nth-child(3) {font-size: 150%;}
+        #text-percent > li:nth-child(4) {font-size: 200%;}
+
+        /* 상대 단위: em (배수) */
+        #text-em > li:nth-child(2) {font-size: 1em;}
+        #text-em > li:nth-child(3) {font-size: 1.5em;}
+        #text-em > li:nth-child(4) {font-size: 2em;}
+
+        /* 상대 단위: rem
+            - em: 부모 요소의 폰트 크기를 기준으로 상대적 크기
+            - rem: 최상위 요소(html)의 폰트 크기를 기준으로 상대적 크기
+        */
+        #text-rem > li:nth-child(2) {font-size: 1rem;}
+        #text-rem > li:nth-child(3) {font-size: 1.5rem;}
+        #text-rem > li:nth-child(4) {font-size: 2rem;}
+
+        /* 상대 단위 기준 테스트 */
+        ul {
+            font-size: 12px;
+        }
+
+        /* 그 외
+            - vw: view width
+            - vh: view height 등 */
+
+        /* 픽셀 단위 사이즈 */
+        .pixel-box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin-bottom: 10px;
+        }
+
+        .percent-box {
+            width: 50%;
+            height: 100px;
+            background-color: lightgreen;
+            margin-bottom: 10px;
+        }
+
+        .em-box, .rem-box {
+            width: 10em;
+            height: 5em;
+            background-color: lightcoral;
+            margin-bottom: 10px;
+        }
+
+        .rem-box {
+            background-color: lightyellow;
+        }
+    </style>
 </head>
 
 <body>
