@@ -5,55 +5,55 @@
     <title>CSS 가상 클래스 실습</title>
 
     <style>
-        /* 반응 선택자
-            - 선언 순서에 유의 */
-        a:link {
-            /* a tag only */
-            color: green;
-        }
+    /* 반응 선택자
+        - 선언 순서에 유의 */
+    a:link {
+        /* a tag only */
+        color: green;
+    }
 
-        a:visited {
-            /* a tag only */
-            color: gray;
-        }
+    a:visited {
+        /* a tag only */
+        color: gray;
+    }
 
-        a:hover {
-            color: orange;
-        }
+    a:hover {
+        color: orange;
+    }
 
-        a:active {
-            color: red;
-        }
+    a:active {
+        color: red;
+    }
 
-        /* 상태 선택자 */
-        input:focus {
-            background-color: lightblue;
-        }
+    /* 상태 선택자 */
+    input:focus {
+        background-color: lightblue;
+    }
 
-        input:disabled {
-            background-color: gray;
-        }
+    input:disabled {
+        background-color: gray;
+    }
 
-        input[type="checkbox"]:checked + label {
-            font-weight: bold;
-        }
+    input[type="checkbox"]:checked + label {
+        font-weight: bold;
+    }
 
-        /* 구조 선택자 */
-        ul#list > li:nth-child(2n) {
-            color: green;
-        }
+    /* 구조 선택자 */
+    ul#list > li:nth-child(2n) {
+        color: green;
+    }
 
-        ul#list > li:nth-child(2n+1) {
-            color: lightgreen;
-        }
+    ul#list > li:nth-child(2n+1) {
+        color: lightgreen;
+    }
 
-        ul#list > li:first-child {
-            color: red;
-        }
+    ul#list > li:first-child {
+        color: red;
+    }
 
-        ul#list > li:last-child {
-            color: blue;
-        }
+    ul#list > li:last-child {
+        color: blue;
+    }
     </style>
 </head>
 
