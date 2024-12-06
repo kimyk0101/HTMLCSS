@@ -3,8 +3,13 @@
 
 <head>
     <title>CSS 폰트 실습</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
+        body {
+            font-family: "Noto Sans", sans-serif;
+        }
         .serif {
             font-family: 'Times New Roman', Times, serif;
         }
@@ -55,6 +60,53 @@
 
         .font-style > .oblique {
             font-style: oblique;
+        }
+
+        /* line-height: 줄 간격 */
+        .line-height > .n10 {
+            line-height: 1.0;
+        }
+
+        .line-height > .n15 {
+            line-height: 1.5;
+        }
+
+        .line-height > .n20 {
+            line-height: 2.0;
+        }
+
+        /* text-align: 정렬 */
+        .text-align {
+            border: 1px dotted red;
+        }
+        
+        .text-align > .left {
+            text-align: left;
+        }
+
+        .text-align > .center {
+            text-align: center;
+        }
+
+        .text-align > .right {
+            text-align: right;
+        }
+
+        /* text-decoration */
+        .text-decoration > .none {
+            text-decoration: none;
+        }
+
+        .text-decoration > .line-through {
+            text-decoration: line-through;
+        }
+
+        .text-decoration > .underline {
+            text-decoration: underline;
+        }
+
+        .text-decoration > .overline {
+            text-decoration: overline;
         }
     </style>
 </head>
@@ -108,8 +160,8 @@
             line-height: 1.5
         </div>
         <div class="n20">
-            line-height: 1.5<br>
-            line-height: 1.5
+            line-height: 2.0<br>
+            line-height: 2.0
         </div>
     </div>
 
@@ -124,8 +176,8 @@
     <ul class="text-decoration">
         <li class="none">none</li>
         <li class="line-through">line-through</li>
-        <li class="underline">underline</li>
         <li class="overline">overline</li>
+        <li class="underline">underline</li>
     </ul>
 
 </body>
