@@ -1,0 +1,66 @@
+* {
+    font-family: "맑은 고딕", sans-serif;
+    font-size: 17px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h1 {
+    font-family: "궁서", "serif";
+    font-size: 30px;
+    letter-spacing: 15px;
+}
+
+.sqare {
+    list-style: square;
+}
+.numberDelete {
+    list-style: none;
+}
+
+thead {
+    background-color: #C8EBFA;
+}
+
+.sp {
+    text-align: right;
+}
+
+.sp:after {
+    content: " (MB/초)";
+}
+
+.sp:before {
+    content: "약 ";
+}
+
+.link:link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.link:visited {
+    color: #FFFFFF;
+}
+
+.link:hover {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+.link:active {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+tbody > tr:hover {
+    background-color: #EDD3ED;
+}
+
+
