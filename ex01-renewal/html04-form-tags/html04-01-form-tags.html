@@ -3,6 +3,64 @@
 
 <head>
     <title>가입 폼 실습</title>
+    <script>
+        function validateForm() {
+            //  form 확인
+            const form = document.forms["registerForm"];    //  하나뿐이니까 [0]으로 잡아도 됨
+            // const form = document.registerForm;
+            
+            const username = form.username;
+            const email = form.email;
+            const password = form.password;
+            const confirm_password = form.confirm_password;
+            const favorites = form.favorite;
+
+            /* username: 길이 3 ~8자
+                email: 길이 20자 이상
+                password: 길이 4 ~ 10자
+                confrim_password: password 값이 같아야
+                favorite: 최소 1개 선택 */
+
+            if (!(username.value.length >= 3 && username.value.length <= 8)) {
+                alert("사용자 이름은 3자 이상 8자 이하 입니다.");
+                username.focus();
+                return false;
+            }
+
+            if (email.value.length < 20) {
+                alert("이메일은 20자 이상입니다.");
+                email.focus();
+                return false;
+            }
+
+            if (!(password.value.length >= 4 && password.value.length <= 10)) {
+                alert("비밀번호는 4자 이상 10자 이하 입니다.");
+                password.focus();
+                return false;
+            }
+
+            if (confirm_password.value !== password.value) {
+                alert("비밀번호를 확인해 주세요.");
+                confirm_password.focus();
+                return false;
+            }
+
+            let favoriteSelected = false;
+            for (let i = 0; i < favorites.length; i++) {
+                if (favorites[i].checked) {
+                    favoriteSelected = true;
+                    break;
+                }
+            }   
+            if (!favoriteSelected) {    //  favoriteSelected가 false라면
+                alert("선호 음료를 최소 1개 선택해 주세요.");
+                return false;
+            }
+
+            //  모든 검증 통과
+            return true;
+        }
+    </script>
 </head>
 
 <body>
@@ -15,7 +73,8 @@
         action: 데이터를 전송 받아 처리할 서버의 페이지 (default: 현재 페이지) -->
     <form name="registerForm"
         action="#"
-        method="post">
+        method="post"
+        onsubmit="return validateForm()">
         <fieldset>
             <legend>회원 정보</legend>
 
@@ -23,8 +82,7 @@
             <input type="text"
                 id="username"   
                 name="username" 
-                placeholder="사용자 이름을 입력하세요"
-                required/>
+                placeholder="사용자 이름을 입력하세요"/>
             <!-- id: 서버로 전송될 때 사용되는 이름 -->
             <!-- name: 페이지 안쪽에서 사용되는 이름 -->
             <!-- label for: label for를 눌러도 input 박스가 반응하도록 -->
@@ -33,19 +91,16 @@
             <input type="text"
                 id="email"
                 name="email"
-                placeholder="이메일을 입력하세요" 
-                required/><br/>
+                placeholder="이메일을 입력하세요" /><br/>
             
             <label for="password">비밀번호</label>
             <input type="password"
                 id="password"
-                name="password"
-                 required/><br/>
+                name="password"/><br/>
 
             <label>비밀번호 확인
                 <input type="password"
-                    name="confirm_password"
-                    required/>
+                    name="confirm_password"/>
             </label><br/>
 
             <label>성별</label>
